@@ -1,0 +1,28 @@
+{
+  "name": "translator",
+  "description": "A translator for exchange and length",
+  "slug": "translator",
+  "privacy": "public",
+  "sdkVersion": "17.0.0",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "primaryColor": "#cccccc",
+  "icon": "./assets/icons/app.png",
+  "loading": {
+    //"icon": "./assets/icons/loading.png",
+    "backgroundImage": "./assets/launch_screen.png",
+    "hideExponentText": true
+
+  },
+  "packagerOpts": {
+    "assetExts": ["ttf", "mp4"]
+  },
+  "ios": {
+    "supportsTablet": true,
+    "bundleIdentifier": "com.helloyy.translator"
+  },
+  "android": {
+    "package": "com.helloyy.translator",
+    "versionCode": 1
+  }
+}
