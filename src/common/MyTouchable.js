@@ -14,7 +14,8 @@ function F8TouchableIOS(props: Object): ReactElement {
     return (
         <TouchableHighlight
             accessibilityTraits="button"
-            underlayColor="#3C5EAE"
+            underlayColor="#dfdfdf"
+            activeOpacity={0.6}
             {...props}
         />
     );

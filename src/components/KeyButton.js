@@ -1,7 +1,7 @@
 /**
  * Created by wangyu on 2016/11/14.
  */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
     View,
     Text,
@@ -15,25 +15,22 @@ export default class KeyButton extends Component {
 
     render() {
 
-        let {onPress, payload} = this.props;
+        let { onPress, payload } = this.props;
         let content;
         if (payload && payload.icon) {
-            content = (
-                <View style={[styles.button, this.props.style]}>
-                    <Image style={styles.icon} source={payload.icon} />
-                </View>
-            );
+            content = <Image style={styles.icon} source={payload.icon} />;
         } else if (payload && payload.text) {
             content = (
-                <View style={[styles.button, this.props.style]}>
-                    <Text style={[styles.buttonText, this.props.labelStyle]}>{payload.text}</Text>
-                </View>
+                <Text style={[styles.buttonText, this.props.labelStyle]}>
+                    {payload.text}
+                </Text>
             );
         }
 
         return (
             <MyTouchable accessibilityTraits="button"
-                         onPress={() => onPress && onPress(payload)} >
+                style={[styles.button, this.props.style]}
+                onPress={() => onPress && onPress(payload)} >
                 {content}
             </MyTouchable>
         );

@@ -66,7 +66,7 @@ export default class KeyBoard extends Component {
         );
 
         let fnKeyContent = (
-            <View>
+            <View style={styles.fnKeyContainer} >
                 <KeyButton style={styles.fnKey} payload={keyMap["clear"]} onPress={this.props.onPress}/>
                 <View style={styles.separatorH} />
                 <KeyButton style={styles.fnKey} payload={keyMap["delete"]} onPress={this.props.onPress}/>
@@ -108,7 +108,11 @@ const styles = StyleSheet.create({
         //alignSelf: 'flex-start',
         //marginLeft: KEY_NUM_WIDTH-4,
     },
+    fnKeyContainer: {
+        //flex: 1,
+    },
     fnKey: {
+        //flex: 1,
         width: KEY_FN_WIDTH,
     },
     separatorH: {
