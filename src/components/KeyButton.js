@@ -15,7 +15,7 @@ export default class KeyButton extends Component {
 
     render() {
 
-        let { onPress, payload } = this.props;
+        let { onPress, payload, style } = this.props;
         let content;
         if (payload && payload.icon) {
             content = <Image style={styles.icon} source={payload.icon} />;
@@ -28,10 +28,13 @@ export default class KeyButton extends Component {
         }
 
         return (
-            <MyTouchable accessibilityTraits="button"
-                style={[styles.button, this.props.style]}
-                onPress={() => onPress && onPress(payload)} >
-                {content}
+            <MyTouchable
+                accessibilityTraits="button"
+                onPress={() => onPress && onPress(payload)}
+            >
+                <View style={[styles.button, style]}>
+                    {content}
+                </View>
             </MyTouchable>
         );
     }
